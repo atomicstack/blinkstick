@@ -50,7 +50,7 @@ func (usbDevice *usbDevice) setColor(c color.Color, index byte) error {
 func (usbDevice *usbDevice) Open() error {
 	device, err := usbDevice.DeviceInfo.Open()
 	if err != nil {
-		return fmt.Errorf("Error while opening device: %s", err)
+		return fmt.Errorf("opening device: %w", err)
 	}
 	usbDevice.Device = &device
 	return nil

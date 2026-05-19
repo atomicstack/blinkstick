@@ -13,7 +13,7 @@ func GetColor(s string, brightness int) (color.Color, error) {
 	if color, ok := colornames.Map[s]; ok {
 		return applyBrightness(color, brightness), nil
 	}
-	return nil, fmt.Errorf("Invalid color %s", s)
+	return nil, fmt.Errorf("invalid color %q", s)
 }
 
 // ColorList returns all available colors
