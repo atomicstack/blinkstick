@@ -43,7 +43,9 @@ func (strip Strip) Blink(color color.Color, duration, times int) error {
 // SetColor set color for all led on current Blinkstick strip
 func (strip Strip) SetColor(color color.Color) error {
 	for index := 0; index < 8; index++ {
-		SetColorOnLed(strip, color, index)
+		if err := SetColorOnLed(strip, color, index); err != nil {
+			return err
+		}
 	}
 	return nil
 }
