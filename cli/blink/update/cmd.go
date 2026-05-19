@@ -8,12 +8,12 @@ import (
 	"github.com/inconshreveable/go-update"
 	"github.com/spf13/cobra"
 
-	"github.com/yesnault/blinkstick/cli/blink/internal"
+	"github.com/atomicstack/blinkstick/cli/blink/internal"
 )
 
 // used by CI to inject architecture (linux-amd64, etc...) at build time
 var architecture string
-var urlGitubReleases = "https://github.com/yesnault/blinkstick/releases"
+var urlGitubReleases = "https://github.com/atomicstack/blinkstick/releases"
 
 // Cmd update
 var Cmd = &cobra.Command{
@@ -42,7 +42,7 @@ func getURLArtifactFromGithub(architecture string) string {
 	}
 
 	text := "Invalid Artifacts on latest release. Please try again in few minutes.\n"
-	text += "If the problem persists, please open an issue on https://github.com/yesnault/blinkstick/issues\n"
+	text += "If the problem persists, please open an issue on https://github.com/atomicstack/blinkstick/issues\n"
 	internal.Exit(text)
 	return ""
 }
