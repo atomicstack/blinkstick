@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/olekukonko/tablewriter"
 
-	"github.com/yesnault/blinkstick"
+	"github.com/atomicstack/blinkstick"
 )
 
 // Check checks error, if != nil, throw panic

@@ -1,17 +1,17 @@
 package main
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/yesnault/blinkstick/cli/blink/color"
-	"github.com/yesnault/blinkstick/cli/blink/device"
-	"github.com/yesnault/blinkstick/cli/blink/flex"
-	"github.com/yesnault/blinkstick/cli/blink/nano"
-	"github.com/yesnault/blinkstick/cli/blink/strip"
-	"github.com/yesnault/blinkstick/cli/blink/update"
-	"github.com/yesnault/blinkstick/cli/blink/version"
+	"github.com/atomicstack/blinkstick/cli/blink/color"
+	"github.com/atomicstack/blinkstick/cli/blink/device"
+	"github.com/atomicstack/blinkstick/cli/blink/flex"
+	"github.com/atomicstack/blinkstick/cli/blink/nano"
+	"github.com/atomicstack/blinkstick/cli/blink/strip"
+	"github.com/atomicstack/blinkstick/cli/blink/update"
+	"github.com/atomicstack/blinkstick/cli/blink/version"
 )
 
 var rootCmd = &cobra.Command{
