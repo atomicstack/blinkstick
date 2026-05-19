@@ -45,7 +45,9 @@ func (flex Flex) Blink(color color.Color, duration, times int) error {
 // SetColor set color for all led on current Blinkstick flex
 func (flex Flex) SetColor(color color.Color) error {
 	for index := 0; index < 32; index++ {
-		SetColorOnLed(flex, color, index)
+		if err := SetColorOnLed(flex, color, index); err != nil {
+			return err
+		}
 	}
 	return nil
 }

@@ -1,3 +1,7 @@
+// Package blinkstick provides a small client for the BlinkStick family of
+// USB-connected RGB LED devices (Strip, Flex, Nano). Devices are enumerated
+// over HID and addressed by LED index; colours are supplied as image/color
+// values and optionally scaled by an integer brightness percentage.
 package blinkstick
 
 import (
